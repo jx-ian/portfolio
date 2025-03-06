@@ -1,0 +1,42 @@
+/* DEFAULTS */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* FOOTER */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #cccccc;
+    width: 100%;
+    padding: 5px 0px;
+}
+
+/* LEFT SIDE TEXT */
+.footer-container p {
+    font-size: 15px;
+}
+
+/* ALIGNMENTS */
+.left-side, .right-side {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+/* CHANGE THE DISPLAY FROM LIST TO INLINE */
+.left-side li, .right-side li {
+    display: inline-flex;
+    
+}
+
+/* STYLE THE LINKS */
+/* PLACEHOLDERS */
+.left-side li a, .right-side li a {
+    font-size: 15px;
+    padding: 20px 20px;
+    position: relative;
+}

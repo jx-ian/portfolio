@@ -1,0 +1,37 @@
+/* DEFAULTS */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* NAVBAR PROPERTIES */
+.navbar-container {
+    background-color: #cccccc;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* CHANGE THE DISPLAY FROM LIST TO INLINE */
+.left-side li, .right-side li {
+    display: inline-block;
+}
+
+/* STYLE THE LINKS */
+.left-side li a, .right-side li a {
+    font-size: 20px;
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+/* WHEN NAV BUTTON IS ACTIVE */
+.active-route{
+    color: #666666; 
+}
+
+/* ADD HOVER EFFECT */
+.left-side li a:hover, .right-side li a:hover {
+    color: #666666;
+}
+
