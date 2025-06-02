@@ -1,17 +1,85 @@
 /* ABOUT */
-
-body{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    text-decoration: none; 
+.about-page {
+   background: linear-gradient(to right,#0f172a, #1e3a8a); 
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #eaeaea;
+.home-container {
     width: 100%;
-    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description {
+    font-size: 25px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+/* Large screen */
+@media screen and (min-width: 650px) {
+
+    .home-container {
+        max-width: 1250px;
+    }
+
+    .about-container {
+        /* background-color: orange; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 2850px;
+        padding: 20px;
+        color: #ffffff;
+    }
+
+    .photo {
+        display: flex;
+        /* background-color: blue; */
+        left: 68%;
+        height: 500px;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+
+}
+
+/* Small screens */
+@media screen and (max-width: 650px) {
+
+    .about-container {
+        /* background-color: orange; */
+        justify-items: center;
+        width: 100%;
+        color: #ffffff;
+        padding: 20px;
+    }
+    
+    .title {
+        text-align: center;
+    }
+    
+    .photo {
+        /* background-color: blue; */
+        width: 500px;
+        height: 500px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+
+    .photo img{
+        width: 100%;
+        height: 100%;
+    }
 }

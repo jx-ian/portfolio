@@ -6,23 +6,35 @@
     text-decoration: none;
 }
 
+.navigation-container {
+    width: 100%;
+    background: linear-gradient(to right,#0f172a, #1e3a8a);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* NAVBAR PROPERTIES */
 .navbar-container {
-    background-color: #cccccc;
+    /* background-color: #cccccc; */
+    max-width: 1300px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* CHANGE THE DISPLAY FROM LIST TO INLINE */
 .left-side li, .right-side li {
     display: inline-block;
+    list-style: none;
+    color: #ffffff;
 }
 
 /* STYLE THE LINKS */
 .left-side li a, .right-side li a {
     font-size: 20px;
-    padding: 20px 30px;
     font-weight: bold;
+    padding: 20px 30px;
 }
 
 /* WHEN NAV BUTTON IS ACTIVE */
@@ -35,3 +47,59 @@
     color: #666666;
 }
 
+/* NOT SHOW COLLAPSE BUTTON WHEN WIDEN SCREEN*/
+@media screen and (min-width: 650px){
+    
+    .collapse-container {
+        padding: 0%;
+        display: none;
+    }
+    
+}
+
+/* NAVIGATION COLLAPSE ON SMALLER SCREEN*/
+@media screen and (max-width: 649px){
+
+    .left-side, .right-side{
+        display: none;
+    }
+
+    .collapse-container {
+        width: 100%;
+    }
+
+    .nav-link, .navbar-toggler {
+        color: #ffffff;
+    }
+
+    .collapse-left-side li a:hover {
+        color: #666666;
+    }
+
+    .navbar-toggler {
+        padding: 20px 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .navbar-toggler:hover, .nav-link:hover {
+        color: #666666;
+    }
+
+    .collapse-navbar-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .collapse-left-side, .collapse-right-side {
+        list-style-type: none;
+    }
+
+    .collapse-left-side li, .collapse-right-side li {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px 30px;
+    }
+    
+}

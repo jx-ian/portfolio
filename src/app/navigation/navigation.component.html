@@ -1,27 +1,68 @@
-<div class="navigation-container">
+<!-- <div class="navigation-container sticky-top"> -->
+    <div class="navigation-container">
     <nav class="navbar-container">
 
         <!-- LEFT SIDE NAV -->
-        <ul class="left-side col-xs">
-            <li class="nav-item1">
+        <ul class="left-side">
+            <li class="nav-item">
                 <a class="nav-link" href="https://github.com/jx-ian" target="_blank">jxian</a>
             </li>
         </ul>
 
         <!-- RIGHT SIDE NAV -->
-        <ul class="right-side col-xs">
-            <li class="nav-item1">
+        <ul class="right-side">
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/home" routerLinkActive="active-route">Home</a>
             </li>
-            <li class="nav-item2">
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/about" routerLinkActive="active-route">About</a>
             </li>
-            <li class="nav-item3">
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/portfolio" routerLinkActive="active-route">Portfolio</a>
             </li>
-            <li class="nav-item4">
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/contact" routerLinkActive="active-route">Contact</a>
             </li>
-        </ul>   
+        </ul>
+
+        <!-- COLLAPSE NAV -->
+        <div class="collapse-container">
+            <nav class="collapse-navbar">
+        
+                <!-- NAV BAR WHEN COLLAPSED -->
+                <div class="collapse-navbar-menu">
+                    <ul class="collapse-left-side">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/jx-ian" target="_blank">jxian</a>
+                        </li>
+                    </ul>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-expanded="false" aria-controls="collapsibleNavbar">
+                        <span class="navbar-toggler-icon">?</span>
+                    </button>
+                    
+                </div>
+
+                <!-- HAMBURGER MENU WHEN CLICKED-->
+                <div class="collapse" id="collapsibleNavbar">
+                    <ul class="collapse-right-side">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/home" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/about" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/portfolio" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/contact" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+        
+            </nav>
+        </div>
+        
     </nav>
 </div>

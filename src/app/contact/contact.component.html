@@ -1,7 +1,75 @@
-
-
-<div class="home-container col-12">
+<div class="home-container">
     <div class="main-container">
-            
+        <div class="contacts-methods-container">
+            <div class="contact-method">
+                <h2>Contact Me</h2>
+                <p>If you have any questions or just want to say hi, feel free to reach out! Don't forget to follow and send me connections!</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/jxian" target="_blank">Linkedin</a></li>
+                    <li><a href="https://github.com/jx-ian" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
+                <input type="hidden" name="access_key" value="1a7296e3-2801-441b-a8dd-e757babbbbd6" />
+                <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                <input type="checkbox" name="botcheck" id="" style="display: none;" />
+                    
+                <h1 class="title">Contact Form</h1>
+                <p class="description">Fill out the form below to leave me a message.</p>
+
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="name" id="first_name" placeholder="John" required class="form-input" />
+                    <div class="feedback" id="first-name-empty-feedback">Please provide your first name.</div>
+                    <div class="feedback invalid" id="first-name-invalid-feedback">Please provide a valid first name.</div>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="last_name" id="lname" placeholder="Doe" required class="form-input" />
+                    <div class="feedback" id="last-name-empty-feedback">Please provide your last name.</div>
+                    <div class="feedback invalid" id="last-name-invalid-feedback">Please provide a valid last name.</div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="you@company.com" required class="form-input" />
+                    <div class="feedback" id="email-empty-feedback">Please provide your email address.</div>
+                    <div class="feedback invalid" id="email-invalid-feedback">Please provide a valid email address.</div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="phone-input-wrapper">
+                        <span class="phone-prefix">+1</span>
+                        <input type="text" name="phone" id="phone" placeholder="(555) 123-4567" required class="form-input" />
+                    </div>
+                    <!-- <input type="text" name="phone" id="phone" placeholder="(555) 1234-567" required class="form-input" /> -->
+                    <div class="feedback" id="phone-empty-feedback">Please provide your phone number.</div>
+                    <div class="feedback invalid" id="phone-invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea rows="8" name="message" id="message" placeholder="Your Message Here" required class="form-input"></textarea>
+                    <div class="feedback" id="message-empty-feedback">Please enter your message.</div>
+                    <div class="feedback invalid" id="message-invalid-feedback">Please provide a valid message.</div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="form-button">Send Message</button>
+                </div>
+
+                <p class="form-result" id="result"></p>
+            </form>
+        </div>
     </div>
 </div>

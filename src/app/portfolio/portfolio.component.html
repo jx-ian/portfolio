@@ -1,6 +1,23 @@
+<div class="portfolio-container">
+    <h1 class="title">Projects</h1>
 
-<div class="home-container col-12">
     <div class="main-container">
+        <div class="project-card" *ngFor="let project of getProjects()">
+            <div class="project-image">
+                <img [src]="project.image" alt="{{ project.title }} image">
+            </div>
+            <div class="detail">
+                <h2 class="project-title">{{ project.title }}</h2>
+                <p class="project-desc">{{ project.description }}</p>
+                <div class="project-tags">
+                    <!-- <span *ngFor="let tag of project.tags" class="tag">{{ tag }}</span> -->
+                    <span *ngFor="let tag of project.tags" [ngStyle]="{'background-color': getTagColor(tag)}" class="tag">{{ tag }}</span>
+                </div>
+                <div class="project-link">
+                <a [href]="project.link" target="_blank" *ngIf="project.link">View Project</a> 
+                </div>
+            </div>
             
+            
+        </div>
     </div>
-</div>

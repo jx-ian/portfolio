@@ -6,37 +6,99 @@
     text-decoration: none;
 }
 
-/* FOOTER */
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    background-color: #cccccc;
-    width: 100%;
-    padding: 5px 0px;
+@media screen and (min-width: 755px) {
+    .footer {
+        width: 100%;
+        background: linear-gradient(to right,#0f172a, #1e3a8a);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        /* background-color: #cccccc; */
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* LEFT SIDE TEXT */
+    .footer-container p {
+        font-size: 15px;
+    }
+
+    .left-side {
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+    }
+
+    /* CHANGE THE DISPLAY FROM LIST TO INLINE */
+    .left-side li, .right-side li {
+        display: inline-flex;
+        color: #ffffff;
+    }
+
+    .footer-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    /* STYLE THE LINKS */
+    .left-side li a, .right-side li a {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px 30px;
+    }
 }
 
-/* LEFT SIDE TEXT */
-.footer-container p {
-    font-size: 15px;
-}
+@media screen and (max-width: 754px) {
 
-/* ALIGNMENTS */
-.left-side, .right-side {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-/* CHANGE THE DISPLAY FROM LIST TO INLINE */
-.left-side li, .right-side li {
-    display: inline-flex;
+    .footer {
+        max-width: 754px;
+        background: linear-gradient(to right,#0f172a, #1e3a8a);
+        margin-left: auto;
+        margin-right: auto;
+    }    
     
-}
+    .footer-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
-/* STYLE THE LINKS */
-/* PLACEHOLDERS */
-.left-side li a, .right-side li a {
-    font-size: 15px;
-    padding: 20px 20px;
-    position: relative;
+    .left-side {
+        /* background-color: orange; */
+        width: 500px;
+        text-align: center;
+        list-style-type: none;
+        padding: 10px;
+    }
+
+    .left-side li{
+        color: #ffffff;
+    }
+
+    .right-side {
+        /* background-color: orange; */
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .right-side li {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+
+    .right-side li a {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+    }
 }
