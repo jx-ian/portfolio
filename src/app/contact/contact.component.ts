@@ -83,16 +83,17 @@ export class ContactComponent implements OnInit {
 
         // Validate Email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-          isValid = false;
-          emailInput.classList.add("invalid");
-          document.getElementById("email-invalid-feedback")!.style.display = "block";
-        }
-        else if (emailInput.value.trim() === "" || emailInput.value === null || emailInput.value === undefined || emailInput.value === " ") {
+        if (emailInput.value.trim() === "" || emailInput.value === null || emailInput.value === undefined || emailInput.value === " ") {
           isValid = false;
           emailInput.classList.add("invalid");
           document.getElementById("email-empty-feedback")!.style.display = "block";
           document.getElementById("email-invalid-feedback")!.style.display = "none";
+        }
+        else if (!emailRegex.test(emailInput.value.trim())) {
+          isValid = false;
+          emailInput.classList.add("invalid");
+          document.getElementById("email-invalid-feedback")!.style.display = "block";
+          document.getElementById("email-empty-feedback")!.style.display = "none";
         }
         else if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
           isValid = false;
@@ -147,7 +148,7 @@ export class ContactComponent implements OnInit {
         }
 
         // Validate Message
-        if (messageInput.value.trim() === "" || firstNameInput.value === null || firstNameInput.value === undefined || firstNameInput.value === " ") {
+        if (messageInput.value.trim() === "" || messageInput.value === null || messageInput.value === undefined || messageInput.value === " ") {
           isValid = false;
           messageInput.classList.add("invalid");
           document.getElementById("message-empty-feedback")!.style.display = "block";
@@ -157,7 +158,7 @@ export class ContactComponent implements OnInit {
           messageInput.classList.add("invalid");
           document.getElementById("message-invalid-feedback")!.style.display = "block";
           document.getElementById("message-empty-feedback")!.style.display = "none";
-        } else if (!/^[a-zA-Z0-9\s.,!?'"-]+$/.test(messageInput.value.trim())) {
+        } else if (!/^[a-zA-Z0-9\s.,!?'"@#$%&*+=-]+|\p{Emoji}+$/u.test(messageInput.value.trim())) {
           isValid = false;
           messageInput.classList.add("invalid");
           document.getElementById("message-invalid-feedback")!.style.display = "block";
