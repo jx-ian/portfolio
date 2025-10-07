@@ -17,6 +17,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    min-height: 100vh;
     height: 100%;
     /* background-color: orange; */
     align-items: flex-start;
@@ -29,6 +30,16 @@
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.education-container {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* background-color: green; */
 }
 
 .project-card {
