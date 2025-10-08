@@ -5,7 +5,7 @@ import { Title } from '@angular/platform-browser';
   selector: 'app-portfolio',
   standalone: false,
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.css'
+  styleUrl: './portfolio.component.css',
 })
 
 // The PortfolioComponent is responsible for displaying a list of project cards
@@ -21,35 +21,35 @@ export class PortfolioComponent {
     {
       id: 1,
       title: "Portfolio",
-      description: "A personal portfolio website showcasing my projects and skills.",
+      description: "A personal portfolio website showcasing my projects and skills. This portfolio is built using Angular and features a responsive design, interactive elements, and a clean layout to effectively present my work and experience.",
       image: "https://i.imgur.com/4Z5b1kH.png",
       link: "https://github.com/jx-ian",
       tags: ["Angular", "TypeScript", "HTML", "CSS"]
     },
-    {
-      id: 2,
-      title: "Portfolio",
-      description: "A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills.",
-      image: "https://i.imgur.com/4Z5b1kH.png",
-      link: "https://github.com/jx-ian",
-      tags: ["Angular", "TypeScript", "HTML", "CSS"]
-    },
-    {
-      id: 3,
-      title: "Portfolio",
-      description: "A personal portfolio website showcasing my projects and skills.",
-      image: "https://i.imgur.com/4Z5b1kH.png",
-      link: "https://github.com/jx-ian",
-      tags: ["Angular", "TypeScript", "HTML", "CSS"]
-    },
-    {
-      id: 4,
-      title: "Portfolio",
-      description: "A personal portfolio website showcasing my projects and skills.",
-      image: "https://i.imgur.com/4Z5b1kH.png",
-      link: "https://github.com/jx-ian",
-      tags: ["Angular", "TypeScript", "HTML", "CSS"]
-    },
+    // {
+    //   id: 2,
+    //   title: "Portfolio",
+    //   description: "A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills.",
+    //   image: "https://i.imgur.com/4Z5b1kH.png",
+    //   link: "https://github.com/jx-ian",
+    //   tags: ["Angular", "TypeScript", "HTML", "CSS"]
+    // },
+    // {
+    //   id: 3,
+    //   title: "Portfolio",
+    //   description: "A personal portfolio website showcasing my projects and skills.",
+    //   image: "https://i.imgur.com/4Z5b1kH.png",
+    //   link: "https://github.com/jx-ian",
+    //   tags: ["Angular", "TypeScript", "HTML", "CSS"]
+    // },
+    // {
+    //   id: 4,
+    //   title: "Portfolio",
+    //   description: "A personal portfolio website showcasing my projects and skills.",
+    //   image: "https://i.imgur.com/4Z5b1kH.png",
+    //   link: "https://github.com/jx-ian",
+    //   tags: ["Angular", "TypeScript", "HTML", "CSS"]
+    // },
   ]
 
 
