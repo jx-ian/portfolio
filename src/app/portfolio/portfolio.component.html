@@ -2,18 +2,18 @@
 
     <h1 class="title">Education</h1>
     <div class="education-container">
-        <p class="education-item">
-            <strong>B.S. Computer Science</strong><br>
-            Roosevelt University, Chicago, IL<br>
-            May 2025
-        </p>
-        <p class="education-item">
-
-        </p>
-
+        <div class="icon">🎓</div>
+        <div class="education-details">
+            <div class="degree">Bachelor of Science</div>
+            <div class="major">Computer Science</div>
+            <div class="institution">Roosevelt University</div>
+            <div class="location">Chicago, IL</div>
+            <div class="graduation-date">May 2025</div> 
+        </div>
+        
     </div>
 
-    <h1 class="title">Projects</h1>
+    <!-- <h1 class="title">Projects</h1>
     <div class="main-container">
         <div class="project-card" *ngFor="let project of getProjects()">
             <div class="project-image">
@@ -22,15 +22,92 @@
             <div class="detail">
                 <h2 class="project-title">{{ project.title }}</h2>
                 <p class="project-desc">{{ project.description }}</p>
-                <div class="project-tags">
+                <div class="project-tags"> -->
                     <!-- <span *ngFor="let tag of project.tags" class="tag">{{ tag }}</span> -->
-                    <span *ngFor="let tag of project.tags" [ngStyle]="{'background-color': getTagColor(tag)}" class="tag">{{ tag }}</span>
+                    <!-- <span *ngFor="let tag of project.tags" [ngStyle]="{'background-color': getTagColor(tag)}" class="tag">{{ tag }}</span>
                 </div>
                 <div class="project-link">
                 <a [href]="project.link" target="_blank" *ngIf="project.link">View Project</a> 
                 </div>
             </div>
-            
-            
+        </div> -->
+    <!-- </div> -->
+
+    <h1 class="title">Projects</h1>
+    <div class="main-container">
+        <div class="project-card" *ngFor="let project of getProjects()">
+            <div class="project-image">
+                <img [src]="project.image[0]" alt="{{ project.title }} image">
+            </div>
+            <div class="detail">
+                <h2 class="project-title">{{ project.title }}</h2>
+                <p class="project-desc">{{ project.description }}</p>
+                <div class="project-tags">
+                    <!-- <span *ngFor="let tag of project.tags" class="tag">{{ tag }}</span> -->
+                    <span *ngFor="let tag of project.tags" [ngStyle]="{'background-color': getTagColor(tag)}" class="tag">{{ tag }}</span>
+                </div>
+                <!-- Project Link -->
+                <!-- <div class="project-link">
+                <a [href]="project.link" target="_blank" *ngIf="project.link">View Project</a> 
+                </div> -->
+                
+                <input type="hidden" disabled [(title)]="project.title">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectCardModal" (click)="selectProject(project)">View More</button>
+            </div>
         </div>
     </div>
+
+    
+    <!-- BOOTSTRAP PROJECT CARD MODAL -->
+    <div class="modal fade" id="projectCardModal" tabindex="-1" aria-labelledby="projectCardModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+                <div class="modal-content">
+
+                    <!-- HEADER -->
+                    <div class="modal-top">
+                        <h1 class="modal-title" id="projectCardModalLabel">{{ selectedProject?.title }}</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body">
+                        <div class="modal-images">
+                            <img [src]="selectedProject?.image" alt="{{ selectedProject?.title }} image" class="modal-image">
+                        </div>
+                        
+                        <!-- RIGHT SIDE DESC -->
+                        <div class="project-detailed-description">
+                            <p class="project-desc">{{ selectedProject?.detailedDescription }}</p>
+                            <div class="project-link" *ngIf="selectedProject?.link">
+                                <a class="custom-button" [href]="selectedProject?.link" target="_blank">
+                                    <img src="image/github.png" alt="github project">
+                                    <p class="link">View Project</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <h1 class="title">Languages</h1>
+    <div class="languages-container">
+        <ul class="language-item">
+            <li class="level">Fluent</li>
+            <li class="language">English</li>
+        </ul>
+        <ul class="language-item">
+            <li class="level">Native</li>
+            <li class="language">Chinese - Mandarin</li>
+        </ul>
+        <ul class="language-item">
+            <li class="level">Native</li>
+            <li class="language">Chinese - Cantonese</li>
+        </ul>
+    </div>
+</div>

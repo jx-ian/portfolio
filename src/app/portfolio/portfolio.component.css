@@ -8,6 +8,7 @@
 .portfolio-container {
     /* background-color: #eaeaea; */
     background: linear-gradient(to right, #0f172a, #1e3a8a);
+    min-height: 100vh;
 }
 
 .main-container {
@@ -17,7 +18,6 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
     height: 100%;
     /* background-color: orange; */
     align-items: flex-start;
@@ -33,13 +33,44 @@
 }
 
 .education-container {
-    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: calc(100% - 30px);  /* GIVES GAP TO THE SIDE WHEN SCREEN IS SMALL */
+    margin: 0 auto;
+    max-width: 500px;
+    background-color: #1e3a8a;
+    border-radius: 10px;
+    background-color: rgba(54, 51, 85, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1.5px solid rgba(71, 85, 105, 0.3);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.education-container .icon {
+    font-size: 50px;
+    margin-right: 50px;
+}
+
+.education-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.education-container .degree {
+    font-size: 25px;
     font-weight: bold;
     color: #ffffff;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    /* background-color: green; */
+}
+
+.education-container .major, .institution, .location, .graduation-date {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .project-card {
@@ -97,16 +128,160 @@
     padding-bottom: 20px;
 }
 
+.project-tags {
+    margin-top: 20px;
+}
+
 .tag {
     background-color: #ffffff;
-    margin: 5px;
-    padding: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     border-radius: 4px;
     display: inline-block;
 }
 
-.project-link a {
-    display: block;
+.detail button {
+    background-color: #1e3a8a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
     margin-top: 10px;
-    color: orange;
+}
+
+.modal-dialog {
+    max-width: 1250px;
+    width: calc(100% - 30px);  /* GIVES GAP TO THE SIDE WHEN SCREEN IS SMALL */
+    margin: 0 auto;
+}
+
+.modal-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.modal-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.modal-top button {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    transform: translateY(-50%);
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+}
+
+.modal-content {
+    background-color: rgba(54, 51, 85, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(71, 85, 105, 0.3);
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1000px){
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.modal-image {
+    display: block;
+    border-radius: 8px;
+    width: 650px;
+    max-width: 100%;
+}
+
+
+.project-detailed-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 100%;
+    width: 650px;
+    height: auto;
+    /* background-color: yellow; */
+}
+
+.project-desc {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.custom-button {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1e3a8a;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.project-link a {
+    color: white;
+}
+
+.custom-button img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    /* vertical-align: middle; */
+}
+
+.languages-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: calc(100% - 30px);  /* GIVES GAP TO THE SIDE WHEN SCREEN IS SMALL */
+    margin: 0 auto;
+    background-color: rgba(54, 51, 85, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    border: 1.5px solid rgba(71, 85, 105, 0.3);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.languages-container li {
+    display: inline;
+    list-style-type: none;
+}
+
+.level, .language {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 10px;
 }

@@ -6,6 +6,18 @@
     text-decoration: none;
 }
 
+.footer-item img {
+    height: 30px;
+    width: 30px;
+    filter: brightness(0.5);
+}
+
+.footer-item img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1);
+}
+
 @media screen and (min-width: 755px) {
     .footer {
         width: 100%;
@@ -41,15 +53,10 @@
         color: #ffffff;
     }
 
-    .footer-link {
-        color: #ffffff;
-        text-decoration: none;
-    }
-
     /* STYLE THE LINKS */
     .left-side li a, .right-side li a {
-        font-size: 20px;
-        font-weight: bold;
+        /* font-size: 20px; */
+        /* font-weight: bold; */
         padding: 20px 30px;
     }
 }
@@ -71,7 +78,8 @@
 
     .left-side {
         /* background-color: orange; */
-        width: 500px;
+        width: 100%;
+        font-size: 10px;
         text-align: center;
         list-style-type: none;
         padding: 10px;
