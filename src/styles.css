@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* HIDE UNWANTED DEAD SPACE ON THE RIGHT */
+html, body {
+    overflow-x: hidden;
+}

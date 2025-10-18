@@ -51,20 +51,45 @@
                 <div class="collapse" id="collapsibleNavbar">
                     <ul class="collapse-right-side">
                         <li class="nav-item">
-                            <!-- <a class="nav-link" routerLink="/home" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Home</a> -->
-                            <a class="nav-link" href="#home" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Home</a>
+                            <!-- ROUTER OUTLET -->
+                            <!-- <a class="nav-link" routerLink="/home" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Home</a>  -->
+                            
+                            <!-- DOES NOT WORK - COLLAPSE CONFLICTS WITH href="#section" ON NAVBAR LINKS -->
+                            <!-- <a class="nav-link" href="#home" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Home</a> -->
+
+                            <!-- WORKS - ADDED TS FUNCTION TO COLLAPSE AND SCROLL -->
+                            <a class="nav-link" href="#home" (click)="collapseAndScroll($event, 'home')">Home</a>
+                            
                         </li>
                         <li class="nav-item">
+                            <!-- ROUTER OUTLET  -->
                             <!-- <a class="nav-link" routerLink="/about" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">About</a> -->
-                            <a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">About</a>
+                            
+                            <!-- DOES NOT WORK - COLLAPSE CONFLICTS WITH href="#section" ON NAVBAR LINKS -->
+                            <!-- <a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">About</a> -->
+
+                            <!-- WORKS - ADDED TS FUNCTION TO COLLAPSE AND SCROLL -->
+                            <a class="nav-link" href="#about" (click)="collapseAndScroll($event, 'about')">About</a>
                         </li>
                         <li class="nav-item">
+                            <!-- ROUTER OUTLET -->
                             <!-- <a class="nav-link" routerLink="/portfolio" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Portfolio</a> -->
-                            <a class="nav-link" href="#portfolio" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Portfolio</a>
+                            
+                            <!-- DOES NOT WORK - COLLAPSE CONFLICTS WITH href="#section" ON NAVBAR LINKS -->
+                            <!-- <a class="nav-link" href="#portfolio" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Portfolio</a> -->
+                             
+                            <!-- WORKS - ADDED TS FUNCTION TO COLLAPSE AND SCROLL -->
+                            <a class="nav-link" href="#portfolio" (click)="collapseAndScroll($event, 'portfolio')">Portfolio</a>
                         </li>
                         <li class="nav-item">
+                            <!-- ROUTER OUTLET -->
                             <!-- <a class="nav-link" routerLink="/contact" routerLinkActive="active-route" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Contact</a> -->
-                            <a class="nav-link" href="#contact" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Contact</a>
+                            
+                            <!-- DOES NOT WORK - COLLAPSE CONFLICTS WITH href="#section" ON NAVBAR LINKS -->
+                            <!-- <a class="nav-link" href="#contact" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Contact</a> -->
+
+                            <!-- WORKS - ADDED TS FUNCTION TO COLLAPSE AND SCROLL -->
+                            <a class="nav-link" href="#contact" (click)="collapseAndScroll($event, 'contact')">Contact</a>
                         </li>
                     </ul>
                 </div>

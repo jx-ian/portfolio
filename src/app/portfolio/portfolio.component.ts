@@ -15,25 +15,27 @@ export class PortfolioComponent {
   constructor(private titleService: Title){
     this.titleService.setTitle("Jia Xian - Portfolio");
   }
-  
+
   // Projects is an array of project cards, each containing details about a project
   private projects: ProjectCards[] = [
     {
       id: 1,
       title: "Portfolio",
       description: "A personal portfolio website showcasing my projects and skills. This portfolio is built using Angular and features a responsive design, interactive elements, and a clean layout to effectively present my work and experience.",
-      image: "https://i.imgur.com/4Z5b1kH.png",
+      detailedDescription: "This personal portfolio website is designed to showcase my projects, skills, and experience in a professional manner. Built using Angular, the site features a responsive design that adapts to various screen sizes, ensuring a seamless user experience across devices. Interactive elements such as project cards and modals allow visitors to explore my work in detail. The clean layout and intuitive navigation make it easy for users to find information about my background and expertise.",
+      image: ["image/imgnotfound.png"],
       link: "https://github.com/jx-ian",
       tags: ["Angular", "TypeScript", "HTML", "CSS"]
     },
-    // {
-    //   id: 2,
-    //   title: "Portfolio",
-    //   description: "A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills. A personal portfolio website showcasing my projects and skills.",
-    //   image: "https://i.imgur.com/4Z5b1kH.png",
-    //   link: "https://github.com/jx-ian",
-    //   tags: ["Angular", "TypeScript", "HTML", "CSS"]
-    // },
+    {
+      id: 2,
+      title: "NFLPICKEM",
+      description: "A full-stack web application for NFL game prediction contests, featuring secure authentication, group competitions, and real-time leaderboards.",
+      detailedDescription: "NFL Pick'em is a full-stack web application that enables users to compete in NFL game prediction contests through a sophisticated pick'em platform. Built with a Spring Boot 3.0 backend (Java 17) and Angular 15 frontend, the application features secure session-based authentication, role-based access control, and a RESTful API architecture. Users can create or join competition groups, submit weekly predictions against point spreads, and track their performance on real-time leaderboards. The system includes comprehensive admin tools for managing games, scores, and user permissions, while the MySQL database employs a normalized schema with composite keys to handle complex many-to-many relationships between users, groups, games, and picks. This project demonstrates proficiency in enterprise Java development, modern frontend frameworks, API design, database architecture, and delivering a complete production-ready sports gaming application.",
+      image: ["image/imgnotfound.png"],
+      link: "https://github.com/jx-ian",
+      tags: ["Angular", "TypeScript", "HTML", "CSS", "Spring Boot", "Java", "MySQL"]
+    },
     // {
     //   id: 3,
     //   title: "Portfolio",
@@ -57,6 +59,15 @@ export class PortfolioComponent {
   getProjects(): ProjectCards[] {
     return this.projects;
   }
+
+  // This property holds the currently selected project card for displaying in a modal
+  selectedProject: ProjectCards | null = null;
+
+  // This method sets the selected project card
+  selectProject(project: ProjectCards) {
+    this.selectedProject = project;
+  }
+
 
   // This method sets the tags background color based on the tag name
   getTagColor(tags: string): string {
@@ -122,7 +133,8 @@ export interface ProjectCards {
   id: number;
   title: string;
   description: string;
-  image: string;
+  detailedDescription: string;
+  image: string[];
   link: string;
   tags: string[];
 }
